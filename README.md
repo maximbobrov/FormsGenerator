@@ -2,6 +2,9 @@
 
 Forms Generator is a Qt desktop application for preparing, editing, previewing, and printing form records backed by a SQL database.
 
+<img width="1919" height="1025" alt="image" src="https://github.com/user-attachments/assets/b52e33be-72a6-45a1-8f25-a4b68df75dd2" />
+
+
 The application provides two main workflows:
 
 - editing reference tables for form types, answers, areas, and locations;
