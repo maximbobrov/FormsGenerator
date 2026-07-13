@@ -1,19 +1,16 @@
-#include "mycoolbutton.h"
+#include "navbutton.h"
 #include <QGraphicsEffect>
-#include <QStyle>
 
-myCoolButton::myCoolButton(const QString &text, QWidget *parent):QPushButton(text, parent)
+NavButton::NavButton(const QString &text, QWidget *parent)
+    : QPushButton(text, parent)
 {
     QGraphicsDropShadowEffect* effect = new QGraphicsDropShadowEffect();
-    effect->setBlurRadius(10); //Adjust accordingly
-    effect->setOffset(0,2); //Adjust accordingly
-
-    this->setGraphicsEffect(effect);
-
-   // this->setIcon(QIcon(":/images/blank.png"));
+    effect->setBlurRadius(10);
+    effect->setOffset(0, 2);
+    setGraphicsEffect(effect);
 }
 
-void myCoolButton::activate()
+void NavButton::activate()
 {
 
   QString style =  QString("QPushButton { \
@@ -30,15 +27,9 @@ void myCoolButton::activate()
            font-family: \"Arial\";\
            text-align:left;\
         }");
-    this->setStyleSheet(style);
-    //QStyle *style=this->style();
-    //style->se
-    //this->setStyle();
-    //this->style().
-
-   // this->setChecked(true);
+    setStyleSheet(style);
 }
-void myCoolButton::activate1()
+void NavButton::activate1()
 {
 
     QString style =  QString("QPushButton { \
@@ -55,15 +46,9 @@ void myCoolButton::activate1()
              font-family: \"Arial\";\
              text-align:left;\
           }");
-      this->setStyleSheet(style);
-    //QStyle *style=this->style();
-    //style->se
-    //this->setStyle();
-    //this->style().
-
-   // this->setChecked(true);
+    setStyleSheet(style);
 }
-void myCoolButton::activate2()
+void NavButton::activate2()
 {
 
     QString style =  QString("QPushButton { \
@@ -80,22 +65,16 @@ void myCoolButton::activate2()
              font-family: \"Arial\";\
              text-align:left;\
           }");
-      this->setStyleSheet(style);
-    //QStyle *style=this->style();
-    //style->se
-    //this->setStyle();
-    //this->style().
-
-   // this->setChecked(true);
+    setStyleSheet(style);
 }
 
 
-void myCoolButton::deactivate()
+void NavButton::deactivate()
 {
 
     QString style =  QString("QPushButton { \
               color: #888888;\
-              background-color: #663699\
+              background-color: #663699;\
               border-width: 0px;\
               border-color: #76797C;\
               border-style: solid;\
@@ -107,6 +86,5 @@ void myCoolButton::deactivate()
              font-family: \"Arial\";\
              text-align:left;\
           }");
-    this->setStyleSheet(style);
-   //   this->setChecked(false);
+    setStyleSheet(style);
 }

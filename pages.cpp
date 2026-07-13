@@ -92,10 +92,10 @@ GenerateFormsPage::GenerateFormsPage(QWidget *parent, commonData *d)
     data->total_num_label->setMaximumHeight(20);
 
     //packagesLayout->addStretch(20);
-    data->genButton = new myCoolButton(tr("Generate Forms"));
+    data->genButton = new NavButton(tr("Generate Forms"));
 
     QWidget *vpcWidget = new QWidget();
-    //myCoolButton *pBtn = new myCoolButton();
+    //NavButton *pBtn = new NavButton();
    // data->genButton->setParent(vpcWidget);
     QGraphicsDropShadowEffect* effect = new QGraphicsDropShadowEffect();
     effect->setBlurRadius(8); //Adjust accordingly
@@ -106,7 +106,7 @@ GenerateFormsPage::GenerateFormsPage(QWidget *parent, commonData *d)
 
 
 
-    data->printButton = new myCoolButton(tr("Print Forms"));
+    data->printButton = new NavButton(tr("Print Forms"));
     state= new QLabel(" Progress: % ");
 
 
@@ -142,7 +142,7 @@ previewLayout->setContentsMargins( data->marg, data->marg, data->marg, data->mar
     ///////////////////
     QGridLayout *prevTab1layout = new QGridLayout;
     prevTab1layout->setContentsMargins( data->marg, data->marg, data->marg, data->marg );
-    //myCoolButton *updateButton = new myCoolButton(tr("Update"));
+    //NavButton *updateButton = new NavButton(tr("Update"));
     QLabel* labelLoc=new QLabel("Location number:");
     QLabel* labelForm=new QLabel("Form Type:");
     data->comboloc = new QComboBox;
@@ -194,12 +194,12 @@ previewLayout->setContentsMargins( data->marg, data->marg, data->marg, data->mar
     //////////////////////////////
     QGridLayout *prevTab2layout = new QGridLayout;
     prevTab2layout->setContentsMargins( data->marg, data->marg, data->marg, data->marg );
-    myCoolButton *update2Button = new myCoolButton(tr("Update"));
+    NavButton *update2Button = new NavButton(tr("Update"));
 
-    myCoolButton *prevButton = new myCoolButton(tr("<<"));
-    myCoolButton *nextButton = new myCoolButton(tr(">>"));
-    myCoolButton *first = new myCoolButton(tr("|<"));
-    myCoolButton *last = new myCoolButton(tr(">|"));
+    NavButton *prevButton = new NavButton(tr("<<"));
+    NavButton *nextButton = new NavButton(tr(">>"));
+    NavButton *first = new NavButton(tr("|<"));
+    NavButton *last = new NavButton(tr(">|"));
     data->pagesspinbox = new QSpinBox;
     data->pagesspinbox->setPrefix(("page "));
     data->pagesspinbox->setSuffix((" of "));
@@ -508,32 +508,32 @@ data->tableStack = new QStackedWidget;
     data->filterEdit4 = new QLineEdit;
 
 
-    data->filterButton1 = new myCoolButton(tr("Filter"));
-    data->addButton1 = new myCoolButton(tr("Add new question"));
-    data->editButton1 = new myCoolButton(tr("Edit"));
-    data->remButton1 = new myCoolButton(tr("Remove Row"));
-     data->checkallButton1 = new myCoolButton(tr("Check All"));
-     data->uncheckallButton1= new myCoolButton(tr("Uncheck All"));;
+    data->filterButton1 = new NavButton(tr("Filter"));
+    data->addButton1 = new NavButton(tr("Add new question"));
+    data->editButton1 = new NavButton(tr("Edit"));
+    data->remButton1 = new NavButton(tr("Remove Row"));
+     data->checkallButton1 = new NavButton(tr("Check All"));
+     data->uncheckallButton1= new NavButton(tr("Uncheck All"));;
 
-    data->filterButton2 = new myCoolButton(tr("Filter"));
-    data->addButton2 = new myCoolButton(tr("Insert Empty Row"));
-    data->remButton2 = new myCoolButton(tr("Remove Row"));
-    data->checkallButton2 = new myCoolButton(tr("Check All"));
-    data->uncheckallButton2= new myCoolButton(tr("Uncheck All"));;
+    data->filterButton2 = new NavButton(tr("Filter"));
+    data->addButton2 = new NavButton(tr("Insert Empty Row"));
+    data->remButton2 = new NavButton(tr("Remove Row"));
+    data->checkallButton2 = new NavButton(tr("Check All"));
+    data->uncheckallButton2= new NavButton(tr("Uncheck All"));;
 
-    data->filterButton3 = new myCoolButton(tr("Filter"));
-    data->addButton3 = new myCoolButton(tr("Add new area"));
-    data->editButton3 = new myCoolButton(tr("Edit area"));
-    data->remButton3 = new myCoolButton(tr("Remove Row"));
-    data->checkallButton3 = new myCoolButton(tr("Check All"));
-    data->uncheckallButton3= new myCoolButton(tr("Uncheck All"));;
+    data->filterButton3 = new NavButton(tr("Filter"));
+    data->addButton3 = new NavButton(tr("Add new area"));
+    data->editButton3 = new NavButton(tr("Edit area"));
+    data->remButton3 = new NavButton(tr("Remove Row"));
+    data->checkallButton3 = new NavButton(tr("Check All"));
+    data->uncheckallButton3= new NavButton(tr("Uncheck All"));;
 
-    data->filterButton4 = new myCoolButton(tr("Filter"));
-    data->addButton4 = new myCoolButton(tr("Add new location"));
-    data->editButton4 = new myCoolButton(tr("Edit location"));
-    data->remButton4 = new myCoolButton(tr("Remove Row"));
-    data->checkallButton4 = new myCoolButton(tr("Check All"));
-    data->uncheckallButton4= new myCoolButton(tr("Uncheck All"));;
+    data->filterButton4 = new NavButton(tr("Filter"));
+    data->addButton4 = new NavButton(tr("Add new location"));
+    data->editButton4 = new NavButton(tr("Edit location"));
+    data->remButton4 = new NavButton(tr("Remove Row"));
+    data->checkallButton4 = new NavButton(tr("Check All"));
+    data->uncheckallButton4= new NavButton(tr("Uncheck All"));;
 
     connect(data->filterButton1, SIGNAL(clicked()), this, SLOT(filter1()));
    // connect(data->addButton1, SIGNAL(clicked()), this, SLOT(open_win1()));
@@ -690,9 +690,9 @@ PrintAndPreviewPage::PrintAndPreviewPage(QWidget *parent,commonData *d)
 
     // viewer = new myPixmapLabel(this);
 
-    //data->openButton = new myCoolButton(tr("Open"));
+    //data->openButton = new NavButton(tr("Open"));
 
-    // data->nextButton = new myCoolButton(tr("Next"));
+    // data->nextButton = new NavButton(tr("Next"));
 
     //connect(data->openButton, SIGNAL(clicked()), this, SLOT(push_open()));
     // connect(data->nextButton, SIGNAL(clicked()), this, SLOT(push_next()));
@@ -745,7 +745,7 @@ PrintAndPreviewPage::PrintAndPreviewPage(QWidget *parent,commonData *d)
     hitsSpinBox->setMaximum(100);
     hitsSpinBox->setSingleStep(10);
 
-    myCoolButton *startQueryButton = new myCoolButton(tr("Start query"));
+    NavButton *startQueryButton = new NavButton(tr("Start query"));
 
     QGridLayout *packagesLayout = new QGridLayout;
     packagesLayout->addWidget(nameLabel, 0, 0);

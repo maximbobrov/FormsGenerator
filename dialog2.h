@@ -25,7 +25,6 @@ public:
     ~Dialog2();
      commonData *data;
 bool status;
- //QLineEdit *num_que;
   QLineEdit *locat;
   QLineEdit *users;
    QLineEdit *disk;
@@ -36,10 +35,8 @@ bool status;
    QLabel *locat_l;
    QLabel *users_l;
    QLabel *disk_l;
-   //QLabel *comm_answer_l;
-   myCoolButton * add_new;
-   myCoolButton * edit_new;
-   //QComboBox *com;
+   NavButton * add_new;
+   NavButton * edit_new;
 
 void my_show();
 

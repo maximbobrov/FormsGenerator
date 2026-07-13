@@ -34,7 +34,6 @@ class GenerateFormsPage : public QWidget
 public:
     commonData *data;
     GenerateFormsPage(QWidget *parent = 0,commonData *d=0);
-    //void  render_page(int page);
     myPixmapLabel* viewer;
     myPixmapLabel* viewer_sing;
     QSlider *slider;
@@ -55,8 +54,7 @@ public slots:
     void print_forms();
 
 public slots:
-    update_key(QString key);
-    // void push_open();
+    void update_key(QString key);
 };
 
 class SetLanguagePage : public QWidget

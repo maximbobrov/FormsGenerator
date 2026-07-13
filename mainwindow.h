@@ -1,6 +1,6 @@
 
-#ifndef TABDIALOG_H
-#define TABDIALOG_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
 #include <QDialog>
 #include <QMainWindow>
@@ -11,7 +11,7 @@
 #include <QGroupBox>
 #include "pages.h"
 #include "commondata.h"
-#include "mycoolbutton.h"
+#include "navbutton.h"
 QT_BEGIN_NAMESPACE
 class QDialogButtonBox;
 class QFileInfo;
@@ -39,27 +39,18 @@ public:
     GenerateFormsPage * genpage ;
     EditTablesPage * tablepage;
     commonData * cData;
-    myCoolButton *edittab;
-    myCoolButton *genf;
-    myCoolButton *file;
-    myCoolButton *loadForm;
-    myCoolButton *formList;
-    myCoolButton *genReports;
-    myCoolButton *Logs;
-    myCoolButton *ActLog;
-    myCoolButton *AudLog;
-    myCoolButton *Settings;
+    NavButton *edittab;
+    NavButton *genf;
+    NavButton *file;
+    NavButton *loadForm;
+    NavButton *formList;
+    NavButton *genReports;
+    NavButton *Logs;
+    NavButton *ActLog;
+    NavButton *AudLog;
+    NavButton *Settings;
 
-    /* QPushButton *tab1;
-    QPushButton *edit1;
-    QPushButton *rem1;
-    QPushButton *add1;
-    QPushButton *tab2;
-    QPushButton *edit2;
-    QPushButton *rem_area2;
-       QPushButton *rem_loc2;
-    QPushButton *add_area2;
-       QPushButton *add_loc2;*/
+    
     SettingsTab(QWidget *parent = 0, commonData * Data=0);
 public slots:
     void setInvisible();
@@ -86,15 +77,15 @@ private:
 
 };
 
-class TabDialog : public QMainWindow
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
 
 public:
     commonData * cData;
-    explicit TabDialog(QWidget *parent = 0);
+    explicit MainWindow(QWidget *parent = 0);
 
-    ~TabDialog();
+    ~MainWindow();
 private:
     void createActions();
     void createMenus();
@@ -114,4 +105,4 @@ private:
 
 };
 
-#endif
+#endif // MAINWINDOW_H

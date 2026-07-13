@@ -15,7 +15,7 @@
 #include <QSpinBox>
 #include <QTextEdit>
 #include <QCheckBox>
-#include "mycoolbutton.h"
+#include "navbutton.h"
 #include <QStackedWidget>
 
 struct FORM
@@ -64,15 +64,15 @@ public:
     QLineEdit *filterEdit2;
     QLineEdit *filterEdit3;
     QLineEdit *filterEdit4;
-    myCoolButton *edit1;
-    myCoolButton *rem1;
-    myCoolButton *add1;
+    NavButton *edit1;
+    NavButton *rem1;
+    NavButton *add1;
 
-    myCoolButton *edit2;
-    myCoolButton *rem_area2;
-    myCoolButton *rem_loc2;
-    myCoolButton *add_area2;
-    myCoolButton *add_loc2;
+    NavButton *edit2;
+    NavButton *rem_area2;
+    NavButton *rem_loc2;
+    NavButton *add_area2;
+    NavButton *add_loc2;
 
     QString que;
     int num_area;
@@ -110,76 +110,66 @@ public:
 
     QString curr_pdf_path;
     QSpinBox *pagesspinbox;
-
-    //////////////Database:
     void init_db();
     void open_db();
     QString db_name;
     QSqlDatabase db;
-    ////////translatable
 
-    QGroupBox *formParametersGroup;// = new QGroupBox(tr("Form Parameters"));
+    QGroupBox *formParametersGroup;
 
-    QLabel *nameLabel;// = new QLabel(tr("Label:"));
+    QLabel *nameLabel;
 
-    QLabel *keyLabel;// = new QLabel(tr("AES Key:"));
+    QLabel *keyLabel;
 
-    QLabel *LocNumLabel;// = new QLabel(tr("Location Number:"));
+    QLabel *LocNumLabel;
 
-    QLabel *ValOfRecLabel ;//= new QLabel(tr("Value Of record:"));
+    QLabel *ValOfRecLabel ;
 
-    QLabel *FormTypeLabel;// = new QLabel(tr("Form Type:"));
-    myCoolButton *genButton;// = new myCoolButton(tr("Generate Forms"));
-    myCoolButton *printButton;// = new myCoolButton(tr("Print Forms"));
-    //
-    QGroupBox *langGroup;//= new QGroupBox(tr("UI Language"));
-    QLabel *langLabel; //new QLabel(tr("Set:"));
-
-    //
-    QGroupBox *tablesGroup;// = new QGroupBox(tr("Table Contents"));
+    QLabel *FormTypeLabel;
+    NavButton *genButton;
+    NavButton *printButton;
+    QGroupBox *langGroup;
+    QLabel *langLabel;
+    QGroupBox *tablesGroup;
     QLabel *tableLabel1;
-    QLabel *tableLabel2;// = new QLabel(tr("Query:"));
+    QLabel *tableLabel2;
     QLabel *tableLabel3;
     QLabel *tableLabel4;
-    myCoolButton *tab1;
-    myCoolButton *tab2;
+    NavButton *tab1;
+    NavButton *tab2;
 
 
     QStackedWidget *tableStack;
-    myCoolButton *filterButton1;// = new myCoolButton(tr("Filter"));
-    myCoolButton *addButton1;
-    myCoolButton *genff;
-    myCoolButton *printforms;
+    NavButton *filterButton1;
+    NavButton *addButton1;
+    NavButton *genff;
+    NavButton *printforms;
     bool status;
-    myCoolButton *editButton1;// = new myCoolButton(tr("Insert Empty Row"));
-    myCoolButton *remButton1;
-    myCoolButton *checkallButton1;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *uncheckallButton1;
-    //
-    myCoolButton *filterButton2;// = new myCoolButton(tr("Filter"));
-    myCoolButton *addButton2;// = new myCoolButton(tr("Insert Empty Row"));
-    myCoolButton *remButton2;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *checkallButton2;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *uncheckallButton2;
-    //
-    myCoolButton *editButton3;
-    myCoolButton *filterButton3;// = new myCoolButton(tr("Filter"));
-    myCoolButton *addButton3;// = new myCoolButton(tr("Insert Empty Row"));
-    myCoolButton *remButton3;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *checkallButton3;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *uncheckallButton3;
-    //
-    myCoolButton *editButton4;
-    myCoolButton *filterButton4;// = new myCoolButton(tr("Filter"));
-    myCoolButton *addButton4;// = new myCoolButton(tr("Insert Empty Row"));
-    myCoolButton *remButton4;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *checkallButton4;// = new myCoolButton(tr("Remove Row"));
-    myCoolButton *uncheckallButton4;
-    //
-    QGroupBox *printGroup;// = new QGroupBox(tr("Preview:"));
-    myCoolButton *openButton;// = new myCoolButton(tr("Open"));
+    NavButton *editButton1;
+    NavButton *remButton1;
+    NavButton *checkallButton1;
+    NavButton *uncheckallButton1;
+    NavButton *filterButton2;
+    NavButton *addButton2;
+    NavButton *remButton2;
+    NavButton *checkallButton2;
+    NavButton *uncheckallButton2;
+    NavButton *editButton3;
+    NavButton *filterButton3;
+    NavButton *addButton3;
+    NavButton *remButton3;
+    NavButton *checkallButton3;
+    NavButton *uncheckallButton3;
+    NavButton *editButton4;
+    NavButton *filterButton4;
+    NavButton *addButton4;
+    NavButton *remButton4;
+    NavButton *checkallButton4;
+    NavButton *uncheckallButton4;
+    QGroupBox *printGroup;
+    NavButton *openButton;
 
-    myCoolButton *nextButton;// = new myCoolButton(tr("Next"));
+    NavButton *nextButton;
     QTextEdit* qrtext;
 
     QCheckBox * check_form_type;
@@ -190,4 +180,4 @@ signals:
 public slots:
 };
 
-#endif // COMMONDATA_H
+#endif

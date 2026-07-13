@@ -1,14 +1,10 @@
-QT       += core gui sql printsupport
-
-
+QT += core gui sql printsupport
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-
-
-TARGET = "Forms Generator"
+TARGET = FormsGenerator
 TEMPLATE = app
 
-HEADERS       = tabdialog.h \
+HEADERS = mainwindow.h \
     pages.h \
     aes256.h \
     QRCodeGenerator.h \
@@ -19,9 +15,10 @@ HEADERS       = tabdialog.h \
     dialog.h \
     dialog1.h \
     dialog2.h \
-    mycoolbutton.h
-SOURCES       = main.cpp \
-                tabdialog.cpp \
+    navbutton.h
+
+SOURCES = main.cpp \
+    mainwindow.cpp \
     pages.cpp \
     generateformspage.cpp \
     aes256.c \
@@ -35,15 +32,10 @@ SOURCES       = main.cpp \
     dialog.cpp \
     dialog1.cpp \
     dialog2.cpp \
-    mycoolbutton.cpp
+    navbutton.cpp
 
 
 RESOURCES += \
-    tabdialog.qrc
-
-LIBS         +=  -lpoppler-qt5
-TRANSLATIONS += QtLanguage_ru.ts
+    app_resources.qrc
 
 VERSION = 1.0.0.1
-
-DISTFILES +=

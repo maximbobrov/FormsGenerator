@@ -8,7 +8,6 @@ Dialog2::Dialog2(QWidget *parent, commonData *d)
 
 {
     data=d;
-    //data->comarea= new QComboBox;
     area=new QLineEdit("");
     locat= new QLineEdit("");
     users=new QLineEdit("");
@@ -20,12 +19,10 @@ Dialog2::Dialog2(QWidget *parent, commonData *d)
     users_l=new QLabel("Number of users");
 
      disk_l=new QLabel("Description");
-    add_new =new myCoolButton("Add");
-    edit_new =new myCoolButton("Edit");
+    add_new =new NavButton("Add");
+    edit_new =new NavButton("Edit");
 
     QGridLayout *packagesLayout = new QGridLayout;
-
-    // packagesLayout->set;
     packagesLayout->addWidget(num_area_1, 0, 0,1,1);
      packagesLayout->addWidget(num_area, 1, 0,1,3);
      packagesLayout->addWidget(area_l, 2, 0,1,1);
@@ -80,7 +77,6 @@ void Dialog2::my_show()
      locat->setText(QString("%1").arg(data->locat));
      users->setText(QString("%1").arg(data->users));
      disk->setText(data->disk);
-     //comm_answer->setText(data->discr);
     }
     this->show();
 }
@@ -90,7 +86,6 @@ void Dialog2::update()
     data->locat=locat->text().toInt();
     data->users=users->text().toInt();
     data->disk=disk->text();
-    //data->comm_answer=comm_answer->text();
     emit add();
 this->close();
 
@@ -101,7 +96,6 @@ void Dialog2::update_edit()
    data->locat=locat->text().toInt();
     data->users=users->text().toInt();
     data->disk=disk->text();
-    //data->comm_answer=comm_answer->text();
     emit edit();
 this->close();
 
